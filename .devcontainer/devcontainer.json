@@ -12,6 +12,7 @@
         "esbenp.prettier-vscode",
         "pkief.material-icon-theme",
         "xabikos.JavaScriptSnippets",
+        "ritwickdey.LiveServer",
         "christian-kohler.path-intellisense",
         "christian-kohler.npm-intellisense"
       ],
