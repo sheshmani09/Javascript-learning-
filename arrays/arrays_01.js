@@ -7,9 +7,9 @@ console.log(myArr2[1])
 
 // //array methods
 
-myArr.push(6)  //adds element at last index
+myArr.push(6)  //adds element or other array at last index
 
-myArr.pop() //removes elemnt from last
+myArr.pop() //removes elemnt or other array from last
 
 myArr.unshift(0) //adds element at the start but not widely used for larger arrays as it shifts all values which can be time consuming
 myArr.shift() //removes element from start
