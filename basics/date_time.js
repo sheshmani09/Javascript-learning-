@@ -19,7 +19,7 @@ console.log(createDate.toLocaleDateString("hi-IN"));//to convert to indian forma
 
 let newDate = new Date()
 console.log(
-    // newDate.toLocaleDateString("en-IN",     //indian format english
+     newDate.toLocaleDateString("en-IN",     //indian format english
     {
         weekday : "narrow",
         day: "2-digit",
