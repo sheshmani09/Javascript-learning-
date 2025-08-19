@@ -13,6 +13,18 @@ console.log(Object.keys(obj5)); //returns keys of the object in array format
 console.log(Object.values(obj5)); //returns values of the object in array format
 console.log(Object.entries(obj5)); //returns key-value pairs of the object in array format
 
-console.log(obj5.hasOwnProperty('5')); //returns true if the object has the property '5'
+// console.log(obj5.hasOwnProperty('5')); //returns true if the object has the property '5'
+
+
+const course ={
+    coursename : 'JavaScript',
+    price : "999",
+    faculty : "John Doe"
+}
+
+// console.log(course.coursename); one way to use the values
+
+const {price} = course
+// console.log(price); better way to do it known as object destructuring using curly braces
 
 
