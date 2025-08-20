@@ -15,12 +15,12 @@ const user = {
 //  this will give empty object in ide because there is nothing in global scope but will refer to windows in browser
 //but if it was inside a function it will diffrent details of system
 
-// const chai = function () {
-//     let username = "Rahul"
-//     console.log(this.username);
+const chai = function () {
+    let username = "Rahul"
+    console.log(this.username);
 
-// }
-// chai()
+}
+chai()
 
 //implicit return
 const add = (num1, num2) => {
@@ -28,9 +28,9 @@ const add = (num1, num2) => {
 };
 // console.log(add(3,4));
 
-// const addtwo = (num1,num2) => num1+num2 //explicit return
-// const addtwo = (num1,num2) => (num1+num2) //explicit return better practice coz below
-// console.log(addtwo(3,4));
+const addtwo = (num1,num2) => num1+num2 //explicit return
+const addtwo = (num1,num2) => (num1+num2) //explicit return better practice coz below
+console.log(addtwo(3,4));
 
 // const objectPrint = ()=> {username : "sam"} //gives undefined
 
