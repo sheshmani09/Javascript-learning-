@@ -36,18 +36,18 @@ for (let i = 1; i <=10; i++) {
 
 //2. while loop syntax
 
-//intialize
-// while (condition) {
-//     statements
-//      updation
-// }
+intialize
+while (condition) {
+    statements
+     updation
+}
 
 // diffrence between while and do while is that -  do while executes atleast once regardless of condition 
 
 //3. do while loop syntax
 
-//intialization
-// do {
-//     statement
-//      updation
-// } while (condition);
+intialization
+do {
+    statement
+     updation
+} while (condition);
