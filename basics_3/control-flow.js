@@ -49,3 +49,11 @@ console.log(a); //output 5
 
 let any = null??undefined??10 //you can use as many times you want
 console.log(any);
+
+
+//ternary operator 
+// syntax condition?true : false
+let value =  5
+value%2==0? console.log("even") : console.log("odd");
+
+
