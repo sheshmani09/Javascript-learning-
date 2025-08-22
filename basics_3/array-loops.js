@@ -34,7 +34,24 @@ let myobject = {
 };
 
 for (const key in myobject) {
-    console.log(key,myobject[key]);
-
+    // console.log(key,myobject[key]);
     
 }
+
+
+
+// foreach loop   - most used for arrays
+
+let coding = ["js", "ruby", "flutter", "python"]
+// coding.forEach(index => console.log(index))
+// console.log("************");
+//(value, index, array) format of parameters
+coding.forEach((index,num,arr) => {    
+    console.log(index,num,arr)
+});
+
+//output
+// js 0 [ 'js', 'ruby', 'flutter', 'python' ]
+// ruby 1 [ 'js', 'ruby', 'flutter', 'python' ]
+// flutter 2 [ 'js', 'ruby', 'flutter', 'python' ]
+// python 3 [ 'js', 'ruby', 'flutter', 'python' ]
