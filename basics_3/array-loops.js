@@ -11,7 +11,7 @@ for (const alpha of greeting) {
   // console.log(alpha);
 }
 
-const map = new Map();
+const map = new Map();   //this is map data structure
 map.set("in", "india");
 map.set("usa", "united states of america");
 map.set("fr", "france");
