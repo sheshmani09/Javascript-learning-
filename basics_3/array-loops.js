@@ -1,6 +1,5 @@
 // for of
 
-const { jsx } = require("react/jsx-runtime");
 
 let arr = [1, 2, 3, 4, 5];
 
@@ -63,6 +62,6 @@ const mycoding = [
 
 mycoding.forEach((item) => 
 {
-    console.log(item.name);    
+    console.log(item.name,":",item.use);    
 }   
 )
