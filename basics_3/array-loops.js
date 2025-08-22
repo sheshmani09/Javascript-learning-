@@ -1,5 +1,7 @@
 // for of
 
+const { jsx } = require("react/jsx-runtime");
+
 let arr = [1, 2, 3, 4, 5];
 
 for (const i of arr) {
@@ -34,20 +36,17 @@ let myobject = {
 };
 
 for (const key in myobject) {
-    // console.log(key,myobject[key]);
-    
+  // console.log(key,myobject[key]);
 }
-
-
 
 // foreach loop   - most used for arrays
 
-let coding = ["js", "ruby", "flutter", "python"]
+let coding = ["js", "ruby", "flutter", "python"];
 // coding.forEach(index => console.log(index))
 // console.log("************");
 //(value, index, array) format of parameters
-coding.forEach((index,num,arr) => {    
-    console.log(index,num,arr)
+coding.forEach((index, num, arr) => {
+  // console.log(index,num,arr)
 });
 
 //output
@@ -55,3 +54,15 @@ coding.forEach((index,num,arr) => {
 // ruby 1 [ 'js', 'ruby', 'flutter', 'python' ]
 // flutter 2 [ 'js', 'ruby', 'flutter', 'python' ]
 // python 3 [ 'js', 'ruby', 'flutter', 'python' ]
+
+const mycoding = [
+  { "name": "js", "use": "web dev" },
+  { "name": "flutter", "use": "app dev" },
+  { "name": "python", "use": "both" }
+]
+
+mycoding.forEach((item) => 
+{
+    console.log(item.name);    
+}   
+)
