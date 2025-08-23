@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom part 4</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    // Add 
+    function addLang(langName) {
+       const li = document.createElement('li')
+       li.innerHTML = langName //innerHTML traverse whole dom which is ineffecient so use the below function
+       document.querySelector(".language").appendChild(li)
+    }
+    addLang("python")
+    
+    function addOptiLang(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+    }
+    addOptiLang("java")
+
+    //Edit
+   let secLang = document.querySelector('li:nth-child(2)')
+    // secLang.innerHTML = "cpp"
+    const newLi = document.createElement('li')
+    newLi.textContent = "cpp"
+    secLang.replaceWith(newLi)
+
+    //edit
+    let firstlang = document.querySelector('li:first-child')
+    firstlang.outerHTML= '<li>Typescript</li>'
+
+    //remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove() 
+
+</script>
+</html>
