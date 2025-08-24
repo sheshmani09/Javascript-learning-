@@ -22,7 +22,7 @@ h1{
 }
 
 #height,#weight{
-    height: 20px;
+    height: 30px;
     width: 120px;
     margin-top: 25px;
     margin-left: 5px;
@@ -46,7 +46,9 @@ button:hover{
     color: #f9f9f9;
 }
 
-
+#result{
+    font-size: x-large;
+}
 
 .weight-guide{
     display: flex;
