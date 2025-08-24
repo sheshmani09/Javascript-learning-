@@ -21,13 +21,13 @@ h1{
     margin: 10px;
 }
 
-#height,#weight{
+#hieght,#weight{
     height: 30px;
     width: 120px;
     margin-top: 25px;
     margin-left: 5px;
 }
-#height:focus{
+#hieght:focus{
     outline: 3px solid black;
 }
 #weight:focus{
