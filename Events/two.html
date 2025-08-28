@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Events part 2</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    let changeName = setTimeout(() => {
+      document.querySelector("h1").innerText = "Sheshmani";
+      console.log("text changed");
+    }, 5000);
+    
+    const stopbtn = document.getElementById("stop");
+
+    stopbtn.addEventListener("click", () => {
+      clearTimeout(changeName);
+      console.log("change stopped");
+    });
+  </script>
+</html>
