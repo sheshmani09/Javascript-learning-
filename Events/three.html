@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: aliceblue">
+    <h2>Good Evening</h2>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+  </body>
+  <script>
+    
+    let intervalID;
+
+    const printStart = function () {
+        function print(str) {
+            console.log(str + Date.now());    
+        }
+        console.log("started");
+        
+        intervalID = setInterval(print,1000,"Time is ")
+    }
+    const printStop = function () {
+        clearInterval(intervalID)
+        console.log("stopped!");  
+    }
+
+    const startBtn  = document.getElementById("Start")
+    const stopBtn  = document.getElementById("Stop")
+
+    startBtn.addEventListener("click",printStart)
+    stopBtn.addEventListener("click",printStop)
+
+  </script>
+</html>
