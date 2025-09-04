@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: #212121;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .card{
+            height: 250px;
+            width: 200px;
+            background-color: #fff;
+            color: #212121;
+            
+        }
+        img{
+          /* height: 200px; */
+          width: 180px;
+          margin: 5px 7px;
+        }
+        h3{
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
 </head>
-<body style="background-color: #212121; color: wheat;">
-0	UNSENT	Client has been created. open() not called yet.
+<body>
+<!-- 0	UNSENT	Client has been created. open() not called yet.
 1	OPENED	open() has been called.
 2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
 3	LOADING	Downloading; responseText holds partial data.
@@ -22,21 +49,46 @@ xhr.status → the HTTP status code (e.g., 200, 404, 500).
 
 xhr.statusText → human-readable message for the status (e.g., "OK", "Not Found").
 
-xhr.responseXML → parsed XML if the response is XML.
+xhr.responseXML → parsed XML if the response is XML. -->
+
+
 </body>
 <script>
+    // const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    // const xhr = new XMLHttpRequest()
+    // xhr.open('GET', requestUrl)
+    // xhr.onreadystatechange = function () {
+    //     console.log(xhr.readyState);
+    //     if (xhr.readyState===4) {
+    //         let data = JSON.parse(this.responseText)
+    //         console.log( data.followers );
+    //         // console.log(this.status);
+    //         // console.log(this.statusText);
+            
+    //     }
+       
+    // }
+    // xhr.send()
+    
+    // Assignment***************
+
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
     const xhr = new XMLHttpRequest()
     xhr.open('GET', requestUrl)
     xhr.onreadystatechange = function () {
-        console.log(xhr.readyState);
-        if (xhr.readyState===4) {
-            console.log(this.responseText);
-            console.log(this.status);
-            // console.log(this.statusText);
-            
-        }
-       
+        if (xhr.readyState===4 && xhr.status == 200) {
+            let data = JSON.parse(this.responseText)
+
+
+            const body  = document.querySelector("body")
+          const card =  document.createElement("div")
+          body.append(card)
+          card.classList.add("card")
+
+          card.innerHTML = `<img src="${data.avatar_url}" alt="image">
+          <h3>Followers: ${data.followers}</h3>`
+
+        }  
     }
     xhr.send()
 
