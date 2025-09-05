@@ -55,3 +55,7 @@ const updateCurrency = async () => {
   let finalAmount = (amtVal * rate).toFixed(2);
   msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
 };
+
+window.addEventListener("load",()=>{
+  updateCurrency()
+})
