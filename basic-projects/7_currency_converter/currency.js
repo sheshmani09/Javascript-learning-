@@ -33,9 +33,13 @@ const updateFlag = (el) => {
   img.src = newSrc;
 };
 
-btn.addEventListener("click", async (e) => {
+btn.addEventListener("click",(e) => {
   e.preventDefault();
-  let amount = document.querySelector(".amount input");
+ updateCurrency()
+});
+
+const updateCurrency = async ()=>{
+   let amount = document.querySelector(".amount input");
   let amtVal = amount.value;
   if (amtVal === "" || amtVal < 1) {
     amtVal = 1;
@@ -50,4 +54,4 @@ btn.addEventListener("click", async (e) => {
   console.log(`1 ${fromCurr.value} = ${rate} ${toCurr.value}`);
   let finalAmount = (amtVal * rate).toFixed(2);
   msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
-});
+}
