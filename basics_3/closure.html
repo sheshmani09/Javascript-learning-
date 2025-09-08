@@ -17,14 +17,14 @@
         // }
 
         function clickHandler(color){
-            // document.body.style.backgroundColor = `${color}`
+            // document.body.style.backgroundColor = `${color}`  only this line instead of inner function will directly be excecuted and the bg color will be greenby default as it was called last
 
             return function(){
                 document.body.style.backgroundColor = `${color}`
             }
         }
 
-        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('orange').onclick = clickHandler("orange")  //here you are returning the inner func. with color variable
         document.getElementById('green').onclick = clickHandler("green")
     </script>
 </body>
