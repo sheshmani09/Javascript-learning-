@@ -17,3 +17,14 @@ setUsername.call(this,username)
 
 const chai = new createUser("rahul","abc@googgle.com",123)
 console.log(chai);
+
+
+// .apply() is used in same manner but the only diffrence is arguments in passed as Array
+// for example setUsername.call(this,username)
+//     this.email = email
+//     this.pass = pass
+// } instead of this we would use 
+// setUsername.call(this,[username])  here username is passed as array or we can pass refrence of array
+//     this.email = email
+//     this.pass = pass
+// }
