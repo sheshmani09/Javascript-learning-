@@ -1,6 +1,4 @@
 // getter and setter 
-
-//getter and setter are a pair i.e both should be defined
 //used to validate or modify a value when reading/wrting a property
 
 
@@ -27,9 +25,9 @@ class User {
 
 const u1 = new User("h@xyz", "abcd")
 
-console.log(u1.pass)   // "ABCD" (getter modifies the output)
+console.log(u1.pass)   // "ABCD" (getter modifies the output)  here getter works
 
-u1.pass = "xyz"        // "Password too short!" (setter blocks invalid value)
+u1.pass = "xyz"        // "Password too short!" (setter blocks invalid value)  here setter works
 u1.pass = "strongpass" 
 console.log(u1.pass)   // "STRONGPASS"
 
