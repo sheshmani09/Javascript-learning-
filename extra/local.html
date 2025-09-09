@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+    <script>
+
+        // local storage 
+        localStorage.setItem("name","sheshmani")
+        // let key = prompt("enter key you want to set")
+        // let val = prompt("enter value you want to set")
+        // localStorage.setItem(key,val)
+        // console.log(`the value of ${key} is ${localStorage.getItem(key)}`);   //gets u the value of the passed key
+        localStorage.removeItem("pass")   //deletes item item with the passed key
+        // localStorage.clear()  //deletes everythingg
+
+        console.log(localStorage.length);   //its a property which tell you the number of keys
+        console.log(localStorage.key(0));
+        console.log(localStorage.key(1));
+        
+        
+        //session storage has same methods and properties as local storage like get item , set item etc. exactly same
+
+        //cookies
+
+        
+        //we can also set path , when it expires etc
+        document.cookie = 'name=ryle';
+        document.cookie = 'username = john; expires = Fri, 10 Sept 2025 01:00:00 GMT; path= /'
+        console.log(document.cookie);
+        
+        
+        
+    </script>
+</body>
+</html>
